@@ -1,0 +1,69 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.7:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 11, in homepage
+    return render_template("index.html")
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/config/workspace/review-scrapper-aws-main/templates/index.html", line 8, in template
+    {%block body%}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+INFO:werkzeug:172.18.0.2 - - [28/Feb/2023 14:14:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.18.0.2 - - [28/Feb/2023 14:14:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:00:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:00:42] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:00:42] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:00:48] "[33mPOST /review HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:00:59] "[33mPOST /review HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:13:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:13:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [04/Mar/2023 15:13:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.15:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 11:41:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 11:41:28] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 11:41:28] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:22:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:23:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:23:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [05/Mar/2023 12:23:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
